@@ -9,7 +9,13 @@ class Check
         array << false
       end
     end
-    array[-1]
+    array.last
+    
+    # array = []
+    # arr.each_with_index do |num, index| 
+        
+    # end
+    # array
   end
 end
 arr = [10,2,5,3]
