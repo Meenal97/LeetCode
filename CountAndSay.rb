@@ -1,14 +1,17 @@
 class CountNum
     def count_and_any num
         num = num.to_s.split("")
-        c = 0
-        num.each do |n|
-          c =  num.count(n)
-          tot = c.to_s + n.to_s
-          return tot
+        return ("1"+num[0]).to_i if num.length == 1
+        c = 1
+        for i in 0..num.length-1
+            if num[i] == num[i+1]
+              c += 1
+            end
+            return  tot = c.to_s + num[i].to_s
         end
         tot.join("").map(&:to_i)
     end
 end
 c = CountNum.new
 puts c.count_and_any(1)
+puts c.count_and_any(11)
