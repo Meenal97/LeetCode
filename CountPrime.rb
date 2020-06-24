@@ -9,7 +9,7 @@ class CountP
           end
         end
     end
-    ((2..10).to_a - nonPrime).count
+    ((2..n).to_a - nonPrime).count
   end
 end
 c = CountP.new
