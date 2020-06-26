@@ -6,16 +6,20 @@ class CountP
     end
     
       def count_prime n
-        nonPrime =[]
+        prime =[]
+        flag = 0;
         for j in 2...n
-            for i in 3...n/2
+            for i in 1...n/2
               if j % i == 0 
-                nonPrime << j
+                flag = 1;
                 break;
               end
             end
         end
-        ((2..n).to_a - nonPrime).count
+        if flag == 0
+         prime << j
+        end
+        prime
       end
 end
 c = CountP.new
